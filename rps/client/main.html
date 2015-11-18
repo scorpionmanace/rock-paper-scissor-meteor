@@ -1,0 +1,85 @@
+<head>
+    <title>rps</title>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <header>
+            <h1>Rock Paper Scissor</h1>
+        </header>
+
+        <section class="initiation-wrapper">
+            {{> playWrapper}}
+            <lable class="active-count floatright">Active: <strong>{{activePlayerCount}}</strong></lable>
+        </section>
+        <!--{{#if allowPlayground}}-->
+        <section class="play-section">
+            {{> playground}}
+        </section>
+        <div class="clearfix"></div>
+        <footer>
+            {{> playItems }}
+        </footer>
+        <!--{{/if}}-->
+    </div>
+</body>
+
+<template name="playWrapper">
+    {{#if isGameFull}}
+    <label class="game-full">
+        The game is full currently right now.
+    </label>
+    {{else}}
+    <a class="{{gameStartOrLeave}} button-large">{{gameStartOrLeave}} Game</a> {{/if}}
+</template>
+
+
+<template name="playground">
+
+    <div class="player-wrapper floatleft" id="player1Wrapper">
+        {{> player1scoreboard}}
+    </div>
+    <div class="table-wrapper floatleft" id="playTable">
+        {{> tableBoard}}
+    </div>
+    <div class="player-wrapper floatleft" id="player2Wrapper">
+        {{> player2scoreboard}}
+    </div>
+
+</template>
+
+<template name="playItems">
+    <a class="button-large rock" value="rock">Rock</a>
+    <a class="button-large paper" value="paper">Paper</a>
+    <a class="button-large scissor" value="scissor">Scissor</a>
+</template>
+
+<template name="player1scoreboard">
+    <label>Player 1 Score:</label>
+    {{#each scores}}
+        {{score}}
+    {{/each}}
+    <label>
+    {{#each weapons}}
+        {{player1}}
+    {{/each}}
+    </label>
+</template>
+
+<template name="tableBoard">
+    <label>Winner</label>
+    {{#each winners}}
+        {{winner}}
+    {{/each}}
+</template>
+<template name="player2scoreboard">
+    <label>Player 2 Score:</label>
+     {{#each scores}}
+        {{score}}
+    {{/each}}
+    <label>
+    {{#each weapons}}
+        {{player2}}
+    {{/each}}
+    </label>
+</template>

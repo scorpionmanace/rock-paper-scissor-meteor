@@ -1,0 +1,52 @@
+/* CSS declarations go here */
+body{background-color:#fff;font-family: fantasy;}
+
+#main.container header{background-color:cornflowerblue;color:#fff;padding:10px;border-bottom:3px solid #ae99ba;}
+#main.container header h1{text-align: center;}
+#main .initiation-wrapper{padding:20px 10px;background-color: #eee;}
+
+.floatleft{float:left;}
+.floatright{float:right;}
+.clearfix{clear:both;}
+
+.button-large {
+    padding: 10px 20px;
+    border:1px solid #cebace;
+    line-height: 1em;
+    cursor: pointer;
+    box-shadow: 1px -2px 1px 1px #cebace;
+    -mov-box-shadow: 1px -2px 1px 1px #cebace;
+    -webkit-box-shadow: 1px -2px 1px 1px #cebace;
+    
+}
+.button-large:active, .button-large:hover {
+    transition-delay: 0.3s; 
+    box-shadow: 0px 0px 0px 0px;}
+.button-large.Join {
+    background-color:darkseagreen;
+}
+.button-large.Leave{
+    background-color:brown;
+}
+
+#main .play-section {}
+
+.player-wrapper {
+    width:35%;
+    text-align:center;
+    border:0 1px solid #aaa;
+    padding:10px;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 24px;
+}
+.table-wrapper {
+    width:30%;
+    text-align: center;
+    padding:10px;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#main footer {width:100%;position:fixed;bottom:0;left:0;text-align: center;}
